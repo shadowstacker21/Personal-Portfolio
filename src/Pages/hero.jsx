@@ -1,4 +1,4 @@
-import img from '../assets/image/profile.jpg'
+import img from '../assets/image/download.png'
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
 
 export default function Hero() {
@@ -47,7 +47,7 @@ export default function Hero() {
             {/* Social Links */}
             <div className="flex gap-4 pt-8">
               <a
-                href="https://github.com"
+                href="https://github.com/shadowstacker21"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-card hover:bg-primary/20 rounded-lg transition-colors text-foreground"
@@ -55,7 +55,7 @@ export default function Hero() {
                 <FaGithub size={20} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/alamin-hossain-854456330/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-card hover:bg-primary/20 rounded-lg transition-colors text-foreground"
@@ -71,7 +71,7 @@ export default function Hero() {
                 <FaTwitter size={20} />
               </a>
               <a
-                href="mailto:hello@example.com"
+                href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#sent"
                 className="p-3 bg-card hover:bg-primary/20 rounded-lg transition-colors text-foreground"
               >
                 <FaEnvelope size={20} />

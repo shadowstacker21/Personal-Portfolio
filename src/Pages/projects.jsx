@@ -1,34 +1,39 @@
 import React from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
-
+import img1 from '../assets/image/dashboard.jpg'
+import img2 from '../assets/image/course_dashboard.png'
+import img3 from '../assets/image/ai.jpg'
 export default function Projects() {
   const projects = [
     {
       title: "E-Commerce Platform",
       description:
-        "Full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include product management, shopping cart, and payment integration.",
-      tags: ["React", "Next.js", "PostgreSQL", "Stripe"],
-      link: "#",
-      github: "#",
-      image: "/ecommerce-dashboard.jpg",
+        "Full-stack e-commerce solution with React, Django Rest Framework, and PostgreSQL. Features include product management, shopping cart, and payment integration.",
+      tags: ["React", "Django Rest Framework", "PostgreSQL", "Stripe"],
+      link: "https://phi-mart-client-omega.vercel.app/",
+      f_github: "https://github.com/shadowstacker21/PhiMart-Client",
+      b_github:"https://github.com/shadowstacker21/PhiMart",
+      image: img1,
     },
     {
-      title: "Task Management App",
+      title: "Course Management System",
       description:
-        "Collaborative task management app built with React and Firebase. Real-time sync, team collaboration, and beautiful UI.",
-      tags: ["React", "Firebase", "Tailwind CSS"],
-      link: "#",
-      github: "#",
-      image: "/task-management-board.png",
+        "Scalable Course Management System built with Django REST Framework and React. Supports real-time updates, role-based access, structured course content, and a streamlined, modern dashboard.",
+      tags: ["React", "Django Rest Framework",'PostgreSQL', "Tailwind CSS"],
+      link: "https://onlineschool-nine.vercel.app/",
+      f_github: "https://github.com/shadowstacker21/Online-School-Frontend",
+      b_github:"https://github.com/shadowstacker21/Online-School-Management-System",
+      image: img2,
     },
     {
       title: "AI Content Generator",
       description:
         "AI-powered content generation tool using OpenAI API. Generate blog posts, social media content, and more with a few clicks.",
-      tags: ["Next.js", "OpenAI", "Tailwind CSS"],
+      tags: ["Django", "OpenAI", "Tailwind CSS"],
       link: "#",
-      github: "#",
-      image: "/ai-tool.jpg",
+      f_github: "#",
+      b_github: "#",
+      image: img3,
     },
   ];
 
@@ -74,20 +79,34 @@ export default function Projects() {
                 </div>
 
                 <div className="flex gap-3 pt-4">
-                  <a
-                    href={project.link}
-                    className="flex items-center gap-2 text-sm text-accent hover:text-primary transition-colors"
+                 <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-sm text-accent hover:text-primary transition-colors"
                   >
-                    <FaExternalLinkAlt size={16} />
-                    Live Demo
-                  </a>
+                      <FaExternalLinkAlt size={16} />
+                      Live Demo
+
+                </a>
 
                   <a
-                    href={project.github}
+                    href={project.b_github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm text-accent hover:text-primary transition-colors"
                   >
                     <FaGithub size={16} />
-                    Code
+                    BackEnd Code
+                  </a>
+                  <a
+                    href={project.f_github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-sm text-accent hover:text-primary transition-colors"
+                  >
+                    <FaGithub size={16} />
+                    FrontEnd Code
                   </a>
                 </div>
               </div>
