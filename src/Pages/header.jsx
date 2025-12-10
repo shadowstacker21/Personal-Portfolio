@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-
+import { BiDownload } from "react-icons/bi";
 export default function Header() {
   const [activeSection, setActiveSection] = useState("about");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -10,6 +10,7 @@ export default function Header() {
     { label: "Skills", id: "skills" },
     { label: "Projects", id: "projects" },
     { label: "Contact", id: "contact" },
+    {label:"Resume",id:"resume"},
   ];
 
   const scrollToSection = (id) => {
@@ -38,7 +39,22 @@ export default function Header() {
                     : "text-gray-400 hover:text-green-400"
                 }`}
               >
-                {item.label}
+           <div className="flex items-center gap-2">
+              {item.label === "Resume" ? (
+                <a
+                  href="https://docs.google.com/document/d/1jwNjo-Ir2T_S-146_M4NOKzmuGZyI4hYzuarxrBcwq8/edit?tab=t.0" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <BiDownload />
+                  {item.label}
+                </a>
+              ) : (
+                item.label
+              )}
+          </div>
+             
               </button>
             ))}
           </nav>
@@ -69,7 +85,21 @@ export default function Header() {
                     : "text-gray-400 hover:text-green-400"
                 }`}
               >
-                {item.label}
+                 <div className="flex items-center gap-2">
+              {item.label === "Resume" ? (
+                <a
+                  href="https://docs.google.com/document/d/1jwNjo-Ir2T_S-146_M4NOKzmuGZyI4hYzuarxrBcwq8/edit?tab=t.0" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <BiDownload />
+                  {item.label}
+                </a>
+              ) : (
+                item.label
+              )}
+          </div>
               </button>
             ))}
           </nav>
